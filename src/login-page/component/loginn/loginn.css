@@ -1,0 +1,37 @@
+
+
+input {
+  width: 30%;
+  border: 0;
+  outline: none;
+  background: #262626;
+  padding: 15px;
+  margin: 15px 0;
+  color: white;
+  font-size: 18px;
+  border-radius: 6px ;
+}
+
+.input {
+
+  height: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.field{
+  border-radius: 6px 0 0 6px ;
+  width: 26%;
+  padding: 15px;
+  border-color: #262626;
+}
+
+button{
+  padding: 15px;
+ 
+  background-color: #262626;
+  border-radius: 0 6px 6px 0;
+  border-color: #262626;
+}

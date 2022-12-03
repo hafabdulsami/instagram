@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+h1{
+    font-family: 'Pacifico', cursive;
+}
+
+.main{
+    margin-top: 5%;
+    text-align: center;
+}
