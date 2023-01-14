@@ -20,7 +20,7 @@ const postSection = (props) => {
                         <div className="different-action"><BsThreeDots /></div>
                     </div>
                 </div>
-                <div className="img-part"><img src={props.reels.actreel} alt="post" className="actual-post" /></div>
+                <div className="img-part"><img src={testdata} alt="post" className="actual-post" /></div>
                 <div className="lower-part">
                     <div className="action-part">
                         <div className="like"><AiOutlineHeart /></div>
