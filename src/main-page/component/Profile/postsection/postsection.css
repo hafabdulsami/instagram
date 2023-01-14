@@ -2,6 +2,7 @@
     height: 10%;
     display: flex;
     align-items: center;
+    margin: 1vh;
 }
 .owner-pic{
     width: 5vh;
@@ -27,10 +28,30 @@
 
 .img-part{
     height: 60%;
-    background-color: blue;
+}
+
+.actual-post{
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .lower-part{
     height: 30%;
-    background-color: brown;
+}
+
+.action-part{
+    margin-top: 4px;
+    display: flex;
+}
+
+.left-actionpart{
+    display: flex;
+    width: 10%;
+    justify-content: space-between;
+}
+
+.right-actionpart{
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
 }
