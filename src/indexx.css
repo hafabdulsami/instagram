@@ -1,4 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
 Body{
+    font-family: 'Roboto', sans-serif;
     color: white;
     background-color: black;
+}
+
+.screen{
+    margin:0 20% 0 20% ;
+}
+
+.story-section{
+    border-bottom: 1px solid;
+    display: flex;
+    overflow-x: scroll;
+    /*justify-content: space-around;*/
+}
+
+.story-section::-webkit-scrollbar{
+    display: none;
 }

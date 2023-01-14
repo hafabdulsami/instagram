@@ -1,0 +1,27 @@
+.row{
+    position: relative;
+    height: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name{
+    width: 13%;
+}
+
+.first{
+    gap: 2%;
+}
+
+input {
+    width: 30%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: white;
+    font-size: 18px;
+    border-radius: 6px ;
+  }

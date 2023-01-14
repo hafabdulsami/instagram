@@ -1,0 +1,14 @@
+.footer{
+    position: fixed;
+    bottom: 0;
+    width:100%;
+    text-align: center;
+    border-color: white;
+    border-style: solid none none;
+    border-width: 0.5px;
+}
+
+a{
+    color: rgb(0, 149, 246);
+    text-decoration: none;
+}

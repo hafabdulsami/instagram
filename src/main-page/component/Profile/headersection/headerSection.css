@@ -1,0 +1,17 @@
+.sub-header{
+    display: flex;
+     /*border-bottom: 1px solid;*/
+     justify-content:space-between;
+     padding-bottom: 1px;
+     padding: 0;
+}
+
+.name1{
+    font-size: xx-large;
+    font-family:'Grand Hotel', cursive;
+}
+.messenger{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

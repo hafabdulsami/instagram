@@ -1,0 +1,33 @@
+
+.outer-circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.inner-circle{
+    width: 9vh;
+    height: 9vh;
+    border-radius: 50%;
+}
+
+.whole-story{
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.circle-profilepic{
+    width:  9vh;
+    height: 9vh;
+    border-radius: 50%;
+}
+
+.story-name{
+    padding-left: 25%;
+}

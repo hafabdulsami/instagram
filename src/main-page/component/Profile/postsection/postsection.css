@@ -1,0 +1,36 @@
+.top-part{
+    height: 10%;
+    display: flex;
+    align-items: center;
+}
+.owner-pic{
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+}
+
+.lefttop-section{
+    width: 50%;
+    display: flex;
+    align-items: center;
+ 
+}
+.righttop-section{
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+}
+
+.postowner-n{
+    padding-left: 5px;
+}
+
+.img-part{
+    height: 60%;
+    background-color: blue;
+}
+
+.lower-part{
+    height: 30%;
+    background-color: brown;
+}
