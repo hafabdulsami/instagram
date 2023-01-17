@@ -1,57 +1,75 @@
-.top-part{
+.top-part {
     height: 10%;
     display: flex;
     align-items: center;
     margin: 1vh;
 }
-.owner-pic{
+
+.owner-pic {
     width: 5vh;
     height: 5vh;
     border-radius: 50%;
 }
 
-.lefttop-section{
+.lefttop-section {
     width: 50%;
     display: flex;
     align-items: center;
- 
+
 }
-.righttop-section{
+
+.righttop-section {
     display: flex;
     width: 50%;
     justify-content: flex-end;
 }
 
-.postowner-n{
+.postowner-n {
     padding-left: 5px;
 }
 
-.img-part{
+.img-part {
     height: 60%;
 }
 
-.actual-post{
+.actual-post {
     max-width: 100%;
     max-height: 100%;
 }
 
-.lower-part{
+.lower-part {
     height: 30%;
 }
 
-.action-part{
+.action-part {
     margin-top: 4px;
     display: flex;
 }
 
-.left-actionpart{
+.left-actionpart {
     display: flex;
     width: 10%;
     justify-content: space-between;
 }
 
-.right-actionpart{
+.right-actionpart {
     width: 90%;
     display: flex;
     justify-content: flex-end;
+}
+
+.single-post {
+    font-weight: 600;
+    padding-top: 12px;
+}
+
+.color-change {
+    color: #6E7A75;
+}
+
+.extra {
+    padding-top: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }

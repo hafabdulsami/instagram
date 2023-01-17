@@ -33,18 +33,12 @@ const postSection = (props) => {
                             <div className="save"><FaRegBookmark /></div>
                         </div>
                     </div>
-                    <div className="total-like">100 likes</div>
-                    <div className="discription">id emoji</div>
-                    <div className="total-comment">view all 'total comment' comment</div>
-                    <div className="add-comment">
-                        <div className="id-ownerpic">
-                            <img src="" alt="m" />
-                        </div>
-                        <div className="add-comment">
-
-                        </div>
+                    <div className="extra">
+                        <div className="total-like">100 likes</div>
+                        <div className="discription">id emoji</div>
+                        <div className="total-comment color-change">view all 'total comment' comment</div>
+                        <div className="time color-change">0000</div>
                     </div>
-                    <div className="time"></div>
                 </div>
             </div>
         </postsection>
