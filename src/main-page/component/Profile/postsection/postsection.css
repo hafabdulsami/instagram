@@ -48,13 +48,15 @@
 
 .left-actionpart {
     display: flex;
-    width: 10%;
+    width: 15%;
     justify-content: space-between;
+    align-items: center;
 }
 
 .right-actionpart {
-    width: 90%;
+    width: 85%;
     display: flex;
+    padding-top: 10px;
     justify-content: flex-end;
 }
 
