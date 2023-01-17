@@ -12,14 +12,16 @@ const Pagenum3 = () => {
     return (
         <>
             <div className="screen">
-                <Profile />
-                <div className="story-section">
-                    {usestory.map(item => <Story n={item} />)}
+                <div className="upper-partn">
+                    <Profile />
+                    <div className="story-section">
+                        {usestory.map(item => <Story n={item} />)}
+                    </div>
+                    <Postsection reels="0" />
                 </div>
-                <Postsection reels="0" />
-            </div>
-            <div className="navvbar">
-                <Navbarr />
+                <div className="lower-partn">
+                        <Navbarr />
+                </div>
             </div>
         </>
 

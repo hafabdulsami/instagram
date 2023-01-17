@@ -7,7 +7,6 @@ import { MdPersonOutline } from 'react-icons/md'
 const navBar = () => {
   return (
     <navbar>
-      <div className="navBar-box">
         <div className="navBar-ele">
           <div className="home-icons"><AiOutlineHome /></div>
           <div className="search-icons"><AiOutlineSearch /></div>
@@ -15,8 +14,6 @@ const navBar = () => {
           <div className="notification-icons"><AiOutlineHeart /></div>
           <div className="profilepage-icons"><MdPersonOutline /></div>
         </div>
-
-      </div>
     </navbar>
   )
 }

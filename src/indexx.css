@@ -8,11 +8,14 @@ Body{
 
 .screen{
     margin:0 20% 0 20% ;
+    max-width: 800px;
+    width: 100%;
     position: relative;
 }
 
 .story-section{
-    border-bottom: 1px solid;
+    border-bottom: 0.5px solid;
+    border-color: #6E7A75;
     display: flex;
     overflow-x: scroll;
     /*justify-content: space-around;*/
@@ -22,7 +25,18 @@ Body{
     display: none;
 }
 
-.navvbar{
-    margin: 0 20% 20% 20%;
-    position: relative;
+
+.upper-partn{
+    height: 90%;
+}
+
+.lower-partn{
+    height: 8%;
+    border-top:  solid 0.5px;
+    border-color:  #6E7A75;
+    position: fixed;
+    bottom: 0;
+    max-width: inherit;    
+    width: 100%;
+    background-color: black;
 }
