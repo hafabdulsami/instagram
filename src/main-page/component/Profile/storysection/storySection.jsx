@@ -6,7 +6,7 @@ const storySection = (props) => {
     const z  = 'b'
     return (
         <storysection>
-                <div className="whole-story" >
+                <div className="whole-story" onClick={props.onClick} >
                     <div className="outer-circle" id={props.n.types}>
                         <div className="inner-circle">
                             <img className='circle-profilepic' src={props.n.img} alt="hello"/>
