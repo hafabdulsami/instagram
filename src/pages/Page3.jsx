@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import Profile from '../main-page/component/Profile/headersection/HeaderSection'
 import Story from '../main-page/component/Profile/storysection/storySection'
 
-
 const Page3 = () => {
     const [usestory, usesetStory] = useState({
         email: "",

@@ -9,7 +9,6 @@ import Navbarr from '../main-page/component/Profile/navbar/navBar';
 import Stories from 'react-insta-stories'
 import m from '../main-page/assest/testdata.png'
 import z from '../main-page/assest/wp5592301.jpg'
-import e from 'express';
 const Pagenum3 = () => {
     var arr = [];
     arr.push(m);
@@ -22,7 +21,6 @@ const Pagenum3 = () => {
         alert("hello");
         usesetDisplay(true);
     }
-
 
     return (
         <>
