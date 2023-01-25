@@ -9,6 +9,7 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import testpic from "../../../assest/testdata.png"
 
+
 const postSection = (props) => {
   return (
     <postsection>
