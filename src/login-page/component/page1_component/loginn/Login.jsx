@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import './loginn.css'
-import { BsEye } from 'react-icons/bs'
-import { AiFillFacebook } from 'react-icons/ai'
-import {check, gettotalnum} from '../../../../Firebase'
-import { useNavigate } from 'react-router-dom'
+import React, { useState } from "react"
+import "./loginn.css"
+import { BsEye } from "react-icons/bs"
+import { AiFillFacebook } from "react-icons/ai"
+import {check, gettotalnum} from "../../../../Firebase"
+import { useNavigate } from "react-router-dom"
 //import { getDatabase, ref, set, onValue, child, get } from 'firebase/database';
 
 const Loginn = (props) => {
@@ -26,17 +26,17 @@ const Loginn = (props) => {
     var promise = check(email, password);
     promise.then((flag)=>{
       if(flag == true){
-       // console.log("page change");
-        navigate('pagenum3')
+        // console.log("page change");
+        navigate("pagenum3")
       }
       else{
-       // console.log("nhi chla")
+        // console.log("nhi chla")
       }
     });
   }
   function test(){
     var gett = gettotalnum();
-    gett.then((count)=>{
+    gett.then(()=>{
       //alert(count);
     })
   }

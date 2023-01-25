@@ -1,14 +1,8 @@
 // Import the functions you need from the SDKs you need
 //import { initializeApp } from "firebase/app";
-import { initializeApp } from 'firebase/app';
-import { getDatabase, ref, set, child, get, update, push, remove } from 'firebase/database';
-import { updateDoc } from 'firebase/firestore'
-import { icons } from 'react-icons';
-//import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-import { AiOutlineFileJpg } from "react-icons/ai";
-import { Navigate } from 'react-router-dom';
-import { getFID } from "web-vitals";
-import {BsThreeDots} from "react-icons/bs"
+import { initializeApp } from "firebase/app";
+import { getDatabase, ref, set, child, get, update,} from "firebase/database";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -31,9 +25,9 @@ var mainUser = null;
 
 /*--------------------get id----------------------------*/
 function getid(email) {
-  var id = '';
+  var id = "";
   for (var m = 0; m < email.length; m++) {
-    if (email[m] == '.') {
+    if (email[m] == ".") {
       break;
     }
     id = id + email[m];
@@ -42,7 +36,7 @@ function getid(email) {
 }
 
 function writeUserData(firstName, secondName, email, username, password, startt) {
-  let mypromise = new Promise(function (resolve, reject) {
+  let mypromise = new Promise(function (resolve) {
     var id = getid(email);
     var flag
     // const db = getDatabase();
@@ -54,7 +48,7 @@ function writeUserData(firstName, secondName, email, username, password, startt)
       }
       else {
         flag = true
-        set(ref(db, 'users/' + id), {
+        set(ref(db, "users/" + id), {
           username: username,
           email: email,
           firstName: firstName,
@@ -91,7 +85,7 @@ function writeUserData(firstName, secondName, email, username, password, startt)
 
 function check(email, password) {
   var id = getid(email);
-  let mypromise = new Promise(function (resolve, reject) {
+  let mypromise = new Promise(function (resolve) {
     var flag = false;
     //const dbRef = ref(getDatabase());
 
@@ -100,8 +94,6 @@ function check(email, password) {
         mainUser = snapshot.val();
         //alert(mainUser.username);
         flag = true;
-      }
-      else {
       }
       resolve(flag)
     }).catch((error) => {
@@ -121,7 +113,7 @@ function LogOut() {
 }
 
 function isExist(name) {
-  let mypromise = new Promise(function (resolve, reject) {
+  let mypromise = new Promise(function (resolve) {
     var flag = null;
     get(child(dbRef, "users")).then((snapshot) => {
       snapshot.forEach(childSnapshot => {
@@ -138,10 +130,10 @@ function isExist(name) {
 
 function gettotalnum() {
 
-  let mypromise = new Promise(function (resolve, reject) {
+  let mypromise = new Promise(function (resolve) {
     var count = 0;
     get(child(dbRef, "users")).then((snapshot) => {
-      snapshot.forEach(function (currentUser) {
+      snapshot.forEach(function () {
         count++
       });
       resolve(count);
@@ -156,7 +148,7 @@ function isFriend(object) {
 }
 
 function addFriend(object) {
-  let mypromise = new Promise(function (resolve, reject) {
+  let mypromise = new Promise(function (resolve) {
     //mainUser = get(child(db,`users/${id}`))
     var id = getid(mainUser.email);
     var obj_id = getid(object.email)
@@ -174,8 +166,8 @@ function addFriend(object) {
         //alert(mainUser.friendList+"after ref")
         //remove(ref(db, `users/${id}`))
         // writeUserData(mainUser.firstName,mainUser.secondName,mainUser.email,mainUser.username,mainUser.password,record.data.)
-        update(ref(db, 'users/' + id), record);
-        update(ref(db, 'users/' + obj_id), record1);
+        update(ref(db, "users/" + id), record);
+        update(ref(db, "users/" + obj_id), record1);
         //alert(mainUser.friendList)
         //set(ref(db,'users/'+id),{
         // friendList:"ho ja bhai"
@@ -195,10 +187,10 @@ function addFriend(object) {
 }
 
 function updated(){
-  let mypromise = new Promise(function(resolve,reject){
+  let mypromise = new Promise(function(resolve){
     var id  = getid(mainUser);
     var flag = false;
-    get(child(dbRef,'users/'+id)).then((snapshot)=>{
+    get(child(dbRef,"users/"+id)).then((snapshot)=>{
       if(snapshot.exists()){
         mainUser = snapshot.val();
         flag = true;
@@ -227,21 +219,21 @@ function getupadate(object, mainuser) {
 
 
 function mutualFriend(object){
-  let mypromise = new Promise(function(resolve,reject){
+  let mypromise = new Promise(function(resolve){
     var arr =""
     //alert("find2")
-  for( var n = 0 ; n< mainUser.friendList.length;n++){
+    for( var n = 0 ; n< mainUser.friendList.length;n++){
 
-    for(var z  = 0 ; z < object.friendList.length ;z++){
+      for(var z  = 0 ; z < object.friendList.length ;z++){
         if(mainUser.friendList[n] == object.friendList[z]){
-          arr = arr +mainUser.friendList[n]+','
+          arr = arr +mainUser.friendList[n]+","
           //alert(arr);
           break;
         }
+      }
     }
-  }
-  //alert(arr);
-  resolve(arr);
+    //alert(arr);
+    resolve(arr);
   })
   return mypromise;
 }

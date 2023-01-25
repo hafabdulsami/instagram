@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import './info.css'
-import { writeUserData, gettotalnum } from '../../../../Firebase'
-import { useNavigate } from 'react-router-dom'
+import React, { useState } from "react"
+import "./info.css"
+import { writeUserData, gettotalnum } from "../../../../Firebase"
+import { useNavigate } from "react-router-dom"
 //import addNewDocument from '../../../../pages/Server'
 //import {db} from '../../../../Firebase'
 ////import {uid} from 'uid';
@@ -30,14 +30,14 @@ const Info = (props) => {
 
   const loadData = async (e) => {
     e.preventDefault();
-    var last = ''
+    var last = ""
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     const { firstName, secondName, email, username, password } = user
     if ((firstName && secondName && email && username && password) && (email.match(mailformat))) {
       var flag = writeUserData(firstName, secondName, email, username, password, "startt");
       flag.then((flag1) => {
         if (flag1) {
-          navigate('/')
+          navigate("/")
         }
         else {
           alert("the email already exist")
