@@ -2,26 +2,24 @@ import React, { useState } from "react";
 import Profile from "../main-page/component/Profile/headersection/HeaderSection";
 import Story from "../main-page/component/Profile/storysection/storySection";
 import Postsection from "../main-page/component/Profile/postsection/postSection";
-
 import { getStory } from "../Firebase";
-//import { getposts } from "../Firebase";
 import Navbarr from "../main-page/component/Profile/navbar/navBar";
+import testdata from "../main-page/assest/testdata.png";
+import { getposts } from "../Firebase";
 import Stories from "react-insta-stories";
 import m from "../main-page/assest/testdata.png";
 import z from "../main-page/assest/wp5592301.jpg";
-import testdata from "../main-page/assest/testdata.png";
-import { getposts } from "../Firebase";
 
 const Pagenum3 = () => {
   var arr = [];
   arr.push(m);
   arr.push(z);
   const [usestory, usesetstory] = useState(getStory());
-  const [usedisplay, usesetDisplay] = useState(false);
   const [usepost, usesetpost] = useState(getposts());
-
-  const handleClick = () => {
-    usesetDisplay(true);
+  const [usedisplay, usesetDisplay] = useState(false);
+  const handleCallback = (value) => {
+    alert("mu")
+    usesetDisplay(value);
   };
 
   const handleFalse = () => {
@@ -46,17 +44,20 @@ const Pagenum3 = () => {
             stories={arr}
             onAllStoriesEnd={handleFalse}
             width="inherit"
+            height="100%"
           />
         )}
         <div className="upper-partn">
           <Profile header="Instagram" />
           <div className="story-section">
             {usestory.map((item, index) => {
-              return <Story n={item} key={index} onClick={handleClick} />;
+              return (
+                <Story n={item} key={index} parentCallback={handleCallback} />
+              );
             })}
           </div>
           {usepost.map((item, index) => {
-            return <Postsection post={item} key = {index} />;
+            return <Postsection post={item} key={index} />;
           })}
           <Postsection post={testpost} />
         </div>
