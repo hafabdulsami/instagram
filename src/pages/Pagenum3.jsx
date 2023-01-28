@@ -18,7 +18,6 @@ const Pagenum3 = () => {
   const [usepost, usesetpost] = useState(getposts());
   const [usedisplay, usesetDisplay] = useState(false);
   const handleCallback = (value) => {
-    alert("mu")
     usesetDisplay(value);
   };
 
@@ -44,26 +43,33 @@ const Pagenum3 = () => {
             stories={arr}
             onAllStoriesEnd={handleFalse}
             width="inherit"
-            height="100%"
           />
         )}
-        <div className="upper-partn">
-          <Profile header="Instagram" />
-          <div className="story-section">
-            {usestory.map((item, index) => {
-              return (
-                <Story n={item} key={index} parentCallback={handleCallback} />
-              );
-            })}
-          </div>
-          {usepost.map((item, index) => {
-            return <Postsection post={item} key={index} />;
-          })}
-          <Postsection post={testpost} />
-        </div>
-        <div className="lower-partn">
-          <Navbarr />
-        </div>
+        {!usedisplay && (
+          <>
+            <div className="upper-partn">
+              <Profile header="Instagram" />
+              <div className="story-section">
+                {usestory.map((item, index) => {
+                  return (
+                    <Story
+                      n={item}
+                      key={index}
+                      handleCallback={handleCallback}
+                    />
+                  );
+                })}
+              </div>
+              {usepost.map((item, index) => {
+                return <Postsection post={item} key={index} />;
+              })}
+              <Postsection post={testpost} />
+            </div>
+            <div className="lower-partn">
+              <Navbarr />
+            </div>
+          </>
+        )}
       </div>
     </>
   );

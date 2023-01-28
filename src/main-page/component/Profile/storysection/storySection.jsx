@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React  from "react";
 import "./storySection.css";
 
 const storySection = (props) => {
   const handleClick = (event) => {
-    props.n.parentCallback(true);
+    props.handleCallback(true);
+    event.preventDefault();
   };
   return (
     <storysection>
