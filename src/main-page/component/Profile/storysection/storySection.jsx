@@ -2,8 +2,12 @@ import React  from "react";
 import "./storySection.css";
 
 const storySection = (props) => {
+  var result ={
+    state:true,
+    address:props.keys
+  }
   const handleClick = (event) => {
-    props.handleCallback(true);
+    props.handleCallback(result);
     event.preventDefault();
   };
   return (

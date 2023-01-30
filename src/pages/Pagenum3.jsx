@@ -18,7 +18,10 @@ const Pagenum3 = () => {
   const [usepost, usesetpost] = useState(getposts());
   const [usedisplay, usesetDisplay] = useState(false);
   const handleCallback = (value) => {
-    usesetDisplay(value);
+    alert("hello "+value.address)
+    usestory[value.address].types = "done";
+    usesetDisplay(value.state);
+    
   };
 
   const handleFalse = () => {
@@ -55,6 +58,7 @@ const Pagenum3 = () => {
                     <Story
                       n={item}
                       key={index}
+                      keys={index}
                       handleCallback={handleCallback}
                     />
                   );
