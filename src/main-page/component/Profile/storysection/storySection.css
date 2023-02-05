@@ -52,3 +52,9 @@
 #best-friend{
     background-color: #29d912;
 }
+
+#me{
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+}

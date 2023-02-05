@@ -21,8 +21,8 @@ const storySection = (props) => {
           onClick={handleClick}
           onKeyDown={() => {}}
         >
-          <div className="inner-circle">
-            <img className="circle-profilepic" src={props.n.img} alt="hello" />
+          <div className="inner-circle" id = {props.n.ids}>
+            <img className="circle-profilepic"id ={props.n.ids} src={props.n.img} alt="hello" />
           </div>
         </div>
         <div className="story-name">{props.n.name}</div>
