@@ -1,6 +1,7 @@
 import React  from "react";
 import "./storySection.css";
 
+
 const storySection = (props) => {
   var result ={
     state:true,
