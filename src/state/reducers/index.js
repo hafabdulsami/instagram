@@ -1,6 +1,8 @@
 import { combineReducers } from "redux";
-import StateReducer from "./StateReducer";
+import StateReducer from "./stateReducer";
 
-export default reducers = combineReducers({
+const reducers = combineReducers({
     amount:StateReducer
 })
+
+export default reducers
