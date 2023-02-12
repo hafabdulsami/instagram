@@ -6,11 +6,10 @@ import {check, gettotalnum} from "../../../../Firebase"
 import { useNavigate } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import { bindActionCreators } from "redux"
-import {abc} from "../../../../state/index"
+import { actionCreator } from "../../../../state/index.js"
 //import { getDatabase, ref, set, onValue, child, get } from 'firebase/database';
 
 const Loginn = (props) => {
-  console.log(abc)
   const Owner = useSelector(state => state.Owner)
   const dispatch = useDispatch()
   const navigate = useNavigate();
