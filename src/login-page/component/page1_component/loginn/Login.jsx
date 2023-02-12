@@ -4,13 +4,19 @@ import { BsEye } from "react-icons/bs"
 import { AiFillFacebook } from "react-icons/ai"
 import {check, gettotalnum} from "../../../../Firebase"
 import { useNavigate } from "react-router-dom"
+import { useDispatch, useSelector } from "react-redux"
+import { bindActionCreators } from "redux"
+import { actionCreator } from "../../../../state"
 //import { getDatabase, ref, set, onValue, child, get } from 'firebase/database';
 
 const Loginn = (props) => {
+  const Owner = useSelector(state => state.Owner)
+  const dispatch = useDispatch()
+  
   const navigate = useNavigate();
   const [user, setUser] = useState({
     email: "",
-    password: "",
+    password: "", 
   });
   let name, value;
   const logIn = (event) => {
@@ -22,17 +28,18 @@ const Loginn = (props) => {
 
   function send(e) {
     e.preventDefault();
-    const { email, password } = user;
-    var promise = check(email, password);
-    promise.then((flag)=>{
-      if(flag == true){
-        // console.log("page change");
-        navigate("pagenum3")
-      }
-      else{
-        // console.log("nhi chla")
-      }
-    });
+    console.log(Owner);
+    //  const { email, password } = user;
+    // var promise = check(email, password);
+    // promise.then((flag)=>{
+    //   if(flag == true){
+    //     // console.log("page change");
+    //     navigate("pagenum3")
+    //   }
+    //   else{
+    //     // console.log("nhi chla")
+    //   }
+    // });
   }
   function test(){
     var gett = gettotalnum();
