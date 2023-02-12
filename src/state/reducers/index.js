@@ -2,7 +2,7 @@ import { combineReducers } from "redux";
 import StateReducer from "./stateReducer";
 
 const reducers = combineReducers({
-    User:StateReducer
+    Owner:StateReducer
 })
 
 export default reducers
