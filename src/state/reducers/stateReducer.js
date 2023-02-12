@@ -1,9 +1,10 @@
+ 
 const reducer = (state=0,action) => {
     if(action.type === 'logout'){
-        return null;
+        return action.User;
     }
     else if(action.type === 'login'){
-        return 'abdulsami'
+        return action.User
     }
     else{
         return state

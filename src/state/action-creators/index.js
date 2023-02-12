@@ -1,18 +1,30 @@
-export const depostMoney= (amount)=>{
-    return(dispatch)=>{
-        dispatch({
-            type:'deposit',
-            payload:amount
-        })
-    }
-}
+import check from "../../Firebase/check";
+export const logout = () => {
+  return (dispatch) => {
+    dispatch({
+      type: "logout",
+      User: null,
+    });
+  };
+};
 
-export const withdraw = (amount)=>{
-    return(dispatch)=>{
+export const login = (email, password) => {
+  var promise = check(email, password);
+  promise.then((flag) => {
+    if (flag.status == true) {
+      return (dispatch) => {
         dispatch({
-            type:'withdraw',
-            payload:amount
+          type: "login",
+          User: flag.User,
+        });
+      };
+    } else {
+      return(dispatch) =>{
+        dispatch({
+          type:"login",
+          User:null
         })
+      }
     }
-
-}
+  });
+};

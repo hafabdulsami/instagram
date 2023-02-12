@@ -2,7 +2,7 @@ import { combineReducers } from "redux";
 import StateReducer from "./stateReducer";
 
 const reducers = combineReducers({
-    amount:StateReducer
+    User:StateReducer
 })
 
 export default reducers

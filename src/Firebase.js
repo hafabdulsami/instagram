@@ -88,14 +88,18 @@ function writeUserData(firstName, secondName, email, username, password, startt)
 function check(email, password) {
   var id = getid(email);
   let mypromise = new Promise(function (resolve) {
-    var flag = false;
+    var flag = {
+      status:false,
+      User:null
+    }
     //const dbRef = ref(getDatabase());
 
     get(child(dbRef, `users/${id}`)).then((snapshot) => {
       if (snapshot.exists() && snapshot.val().password == password) {
         mainUser = snapshot.val();
+        flag.User = mainUser;
         //alert(mainUser.username);
-        flag = true;
+        flag.status = true;
       }
       resolve(flag)
     }).catch((error) => {
