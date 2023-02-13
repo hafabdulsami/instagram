@@ -1,4 +1,5 @@
-import check from "../../Firebase/check";
+import {check} from "../../Firebase.js";
+
 export const logout = () => {
   return (dispatch) => {
     dispatch({

@@ -295,7 +295,4 @@ function getposts(){
 
 
 
-
-
-
 export { writeUserData, check, gettotalnum, isExist, LogOut, isFriend, addFriend , updated, mutualFriend, getStory, getposts};
